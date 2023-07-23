@@ -1,6 +1,6 @@
 package com.springBank.code.DTO.Account;
 
-import com.springBank.code.Entity.User;
+import com.springBank.code.Entity.Users;
 import com.springBank.code.Entity.UserTransactions;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,7 +22,7 @@ public class AccountDTO implements Serializable {
     private String s_account_currency;
     private String s_account_creation_date;
 
-    private User o_owner;
+    private Users o_owner;
 
     private List<UserTransactions> t_transactions;
 

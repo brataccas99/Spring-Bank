@@ -1,14 +1,18 @@
 package com.springBank.code.DAO;
 
 import com.springBank.code.Entity.Account;
-import com.springBank.code.Entity.User;
+import com.springBank.code.Entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface UserDAO extends JpaRepository<User, Long> {
-    User findByName(String name);
-    List<User> findByAccount(Account account);
+public interface UserDAO extends JpaRepository<Users, Long> {
+    Users findByNome(String nome);
+
+    Optional<Users> findById(Long id);
+
+    List<Users> findByAccounts(Account account);
 }

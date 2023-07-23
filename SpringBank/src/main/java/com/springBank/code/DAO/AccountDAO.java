@@ -1,13 +1,17 @@
 package com.springBank.code.DAO;
 
 import com.springBank.code.Entity.Account;
-import com.springBank.code.Entity.User;
+import com.springBank.code.Entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface AccountDAO extends JpaRepository<Account, Long> {
-    Account findByAccountNumber(String iban);
-    Account findByOwner(User owner);
-    Account findByTransactionId(Long transactionId);
+    Account findByIban(String iban);
+
+    Optional<Account> findById(Long id);
+
+    Account findByOwner(Users owner);
 }

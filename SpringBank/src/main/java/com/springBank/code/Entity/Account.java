@@ -34,7 +34,7 @@ public class Account {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id")
-    private User owner;
+    private Users owner;
 
     @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     private List<UserTransactions> transactions;

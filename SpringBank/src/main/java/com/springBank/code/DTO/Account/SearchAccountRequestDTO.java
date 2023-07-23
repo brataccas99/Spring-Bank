@@ -1,6 +1,6 @@
 package com.springBank.code.DTO.Account;
 
-import com.springBank.code.Entity.User;
+import com.springBank.code.Entity.Users;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +13,6 @@ public class SearchAccountRequestDTO implements Serializable {
     private String s_account_number;
     private String s_account_creation_date;
     private String account_id;
-    private User o_owner;
+    private Users o_owner;
 
 }
