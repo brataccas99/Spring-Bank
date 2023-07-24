@@ -26,8 +26,8 @@ public class userTransactionREST {
     public ResponseEntity<RisultatoDTO<Long>> insertUserTransaction(@RequestBody InsertUserTransactionRequestDTO userTransactionDTO) {
         RisultatoDTO<Long> risultatoDTO = new RisultatoDTO<>();
         try {
-            Long result=userTransactionService.insertUserTransaction(userTransactionDTO);
-            if(!ObjectUtils.isEmpty(result)) {
+            Long result = userTransactionService.insertUserTransaction(userTransactionDTO);
+            if (!ObjectUtils.isEmpty(result)) {
                 risultatoDTO.success(HttpStatus.SC_OK);
                 risultatoDTO.setData(result);
                 risultatoDTO.setDescrizione("successo");
@@ -65,11 +65,11 @@ public class userTransactionREST {
     }
 
     @GetMapping(value = "/getUserTransaction")
-public ResponseEntity<RisultatoDTO<Long>> getUserTransaction(@RequestParam("id utente") Long userTransactionDTO) {
+    public ResponseEntity<RisultatoDTO<Long>> getUserTransaction(@RequestParam("id utente") Long userTransactionDTO) {
         RisultatoDTO<Long> risultatoDTO = new RisultatoDTO<>();
         try {
-            Long result=userTransactionService.searchUserTransactionById(userTransactionDTO);
-            if(!ObjectUtils.isEmpty(result)) {
+            Long result = userTransactionService.searchUserTransactionById(userTransactionDTO);
+            if (!ObjectUtils.isEmpty(result)) {
                 risultatoDTO.success(HttpStatus.SC_OK);
                 risultatoDTO.setData(result);
                 risultatoDTO.setDescrizione("successo");
@@ -77,9 +77,9 @@ public ResponseEntity<RisultatoDTO<Long>> getUserTransaction(@RequestParam("id u
 
             }
             return ResponseEntity.status(HttpStatus.SC_OK).body(risultatoDTO);
-        }catch(Exception e){
-            logger.info("errore"+ e);
-            risultatoDTO.error("err" , HttpStatus.SC_INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            logger.info("errore" + e);
+            risultatoDTO.error("err", HttpStatus.SC_INTERNAL_SERVER_ERROR);
             return ResponseEntity.status(HttpStatus.SC_INTERNAL_SERVER_ERROR).body(risultatoDTO);
         }
     }
