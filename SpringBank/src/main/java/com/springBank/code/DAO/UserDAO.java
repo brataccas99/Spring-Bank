@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface UserDAO extends JpaRepository<Users, Long> {
-    Users findByNome(String nome);
+    Optional<Users> findByNome(String nome);
 
     Optional<Users> findById(Long id);
 
