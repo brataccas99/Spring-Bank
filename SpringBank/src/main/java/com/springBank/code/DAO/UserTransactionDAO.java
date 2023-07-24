@@ -12,6 +12,6 @@ public interface UserTransactionDAO extends JpaRepository<UserTransactions, Long
     Optional<UserTransactions> findById(Long transactionId);
     UserTransactions findByAccountIban(String iban);
     UserTransactions findByAccount(Account account);
-    UserTransactions findByDate(String transactionDate);
+    Optional<UserTransactions> findByDate(String transactionDate);
 
 }

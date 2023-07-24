@@ -13,5 +13,5 @@ public interface AccountDAO extends JpaRepository<Account, Long> {
 
     Optional<Account> findById(Long id);
 
-    Account findByOwner(Users owner);
+    Optional<Account> findByOwner(Users owner);
 }

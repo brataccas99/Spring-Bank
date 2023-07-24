@@ -3,11 +3,13 @@ package com.springBank.code.DTO.UserTransactions;
 import com.springBank.code.Entity.Account;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class UserTransactionsDTO implements Serializable {

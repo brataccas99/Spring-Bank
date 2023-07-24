@@ -4,12 +4,14 @@ import com.springBank.code.Entity.Users;
 import com.springBank.code.Entity.UserTransactions;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.List;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class AccountDTO implements Serializable {
@@ -24,7 +26,7 @@ public class AccountDTO implements Serializable {
 
     private Users o_owner;
 
-    private List<UserTransactions> t_transactions;
+    private List<Long> t_transactions;
 
 
 }

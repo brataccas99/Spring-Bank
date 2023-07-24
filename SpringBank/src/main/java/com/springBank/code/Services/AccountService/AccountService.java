@@ -3,6 +3,7 @@ package com.springBank.code.Services.AccountService;
 import com.springBank.code.DTO.Account.DeleteAccountRequestDTO;
 import com.springBank.code.DTO.Account.InsertAccountRequestDTO;
 import com.springBank.code.DTO.Account.UpdateAccountRequestDTO;
+import com.springBank.code.Entity.Users;
 import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +18,6 @@ public interface AccountService {
 
         Long searchAccountById(Long id);
 
-        String searchByOwner(User owner);
+
+        String searchByOwner(Users owner);
 }
